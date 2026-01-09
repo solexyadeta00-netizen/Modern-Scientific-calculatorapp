@@ -85,4 +85,4 @@ def main(page: ft.Page):
 
 # ft.app() bakka isaa ft.run() fayyadamneera
 if __name__ == "__main__":
-    ft.run(main)
+    ft.run(main) 
