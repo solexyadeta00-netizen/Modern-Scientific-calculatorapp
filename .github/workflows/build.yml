@@ -2,7 +2,7 @@ name: Build Calculator APK
 on:
   push:
     branches:
-      - main  # Yommuu koodii 'main' irratti push gootu ijaara
+      - main
 
 jobs:
   build:
@@ -25,7 +25,7 @@ jobs:
           flutter-version: '3.19.0'
           
       - name: Build APK
-        run: flet build apk --main main.py
+        run: flet build apk  # Ajaja gabaabaa kana fayyadamna
         
       - name: Upload APK
         uses: actions/upload-artifact@v4
