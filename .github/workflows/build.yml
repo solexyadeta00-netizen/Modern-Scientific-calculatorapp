@@ -22,12 +22,13 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          # Flet vershinii haaraaf Flutter 3.27.0 ol barbaachisa
           flutter-version: '3.27.0'
           
       - name: Build APK
-        # '--no-interactive' jechuun gaaffii 'Yes/No' akka ofumaan deebisu godha
-        run: flet build apk --no-interactive
+        env:
+          # Kuni gaaffii Yes/No hunda ofumaan 'Yes' godha
+          FLET_NON_INTERACTIVE: "true"
+        run: flet build apk
         
       - name: Upload APK
         uses: actions/upload-artifact@v4
